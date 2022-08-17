@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spartan Race</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        
+        h1{
+            text-align: center;
+            color: aliceblue;
+        }
+       
+        h2{
+            text-align: center;
+            border: 1px solid aliceblue;
+            color: aliceblue;
+            padding: 15px;
+            font-size: 20px;
+            border-radius: 5px;
+            max-width:800px;
+            margin: 0 auto;
+            margin-bottom: 20px;
+        }
+       
+        hr{
+            max-width:800px;
+            text-align:left;
+            margin:0 auto;
+        }
+        
+        img{
+            display: block;
+            margin: 0 auto;
+            margin-top: 15px;
+            max-width: 100%;
+            border-radius: 10px;
+        }
+        
+        p{
+            line-height: 1.5;
+            font-size: 15px;
+            margin: 20px 0 10px;
+            color: aliceblue;
+            text-align: center;
+        }
+       
+        button{
+            display: block;
+            margin: 20px auto;
+            background: aliceblue;
+            color: rgb(63, 61, 61);
+            font-size: 18px;
+            font-weight: bold;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 30px;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.93);
+            transition: all 200ms ease-in-out;
+        }
+
+        button:hover{
+            opacity: 0.1;
+            cursor: pointer;
+        }
+        
+        span{
+            display: block;
+            color: aliceblue;
+            text-align: center;
+            margin: 0 auto;
+            max-width:800px;
+        }
+       
+        a{
+           color: aliceblue;
+           text-decoration: none;
+           font-size: 15px;
+           
+        }
+        a:hover{
+             text-decoration: underline;
+        }
+        .container{
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 15px 60px;
+            background: linear-gradient(109.6deg, rgba(0, 0, 0, 0.93) 11.2%, rgb(63, 61, 61) 78.9%);        }
+       
+        .site{
+           margin: 20px ;
+           display: block;
+           color: aliceblue;
+           text-decoration: none;
+           font-size: 15px;
+           text-align: center;
+        }
+        .site:hover{
+            text-decoration: underline;
+        }
+
+        .footer{
+            text-align: center;
+            color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Spartan Race</h1>
+        <h2>Welcom to awesome game</h2>
+        <img src="https://photos.spartan.com/races/7452/watermarked_previews/108157/Photo2/David_4278.jpg" alt="Spartan">
+        <p>
+            Spartan races do more than test you <em>physically and mentally</em>. <br>They reveal your true, unbreakable potential one epic obstacle at a time.
+        </p>
+        <hr>
+        <a href="https://www.spartan-race.com.ua/uk" target="_blank" class="site">More info</a>
+        <button class="finde-button">FINDE A RACE</button>
+        <span>
+            At which events will the Member <strong>Recovery Zone</strong> be available? <br><br>
+            The Member Recovery Zone will be featured at our events in 2021 and 2022 that are the most challenging where racers need to recover between multiple events in the day. All Trifecta Weekends will feature the recovery tent as well as select other events*. Here is the full list of recovery zone events.
+        </span>
+        <img src="https://photos.spartan.com/races/7452/watermarked_previews/108158/part%202/DSC_0855.jpg" alt="Ira">
+        <p class="footer">This page was built by <a href="https://www.facebook.com/profile.php?id=100006328269291" target="_blank">Ira Bartosh</a></p>
+    </div>
+    <script>
+        function find() {
+            let name = prompt ("What is your name?");
+            let email = prompt ("What is your email address?");
+            let  age = prompt ("How old are you?");
+            let heading = document.querySelector("h1");
+
+            if (age <18) {
+                heading.innerHTML = "🙁 <br/> Sorry, you so young " + name;
+            } else {
+                heading.innerHTML = "😃 <br/> Hi  " + name;
+            }
+
+            alert(
+                "Thank you," + name + "! We'll be in touch by email😃"
+            );
+
+        }
+            let findButton = document.querySelector(".finde-button");
+            findButton.addEventListener("click", find);
+
+     </script>  
+</body>
+</html>
